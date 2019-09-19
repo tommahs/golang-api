@@ -1,5 +1,5 @@
-// package mariadb
-package main
+package mariadb
+// package main
 
 import (
   "fmt"
@@ -14,19 +14,31 @@ import (
 // CREATE TABLE eventTable(id INT NOT NULL AUTO_INCREMENT, eventid INT NOT NULL, eventname VARCHAR(255), PRIMARY KEY(id));
 // INSERT INTO eventTable(eventid, eventname) VALUES(1, 'Start');
 
-type Event struct {
+type event struct {
   id, eventid int
   eventname string
 }
 
-func main(){
+func Selectevent()(event) {
+  var Event event
   db, err := sql.Open("mysql", "golanguser:golang@/golang")
   if err != nil {
     fmt.Println("Error is", err)
+  } else {
+    defer db.Close()
+    db.QueryRow("SELECT id,eventid,eventname FROM eventTable WHERE id = '1';").Scan(&Event.id, &Event.eventid, &Event.eventname)
   }
+  return Event
+}
 
-  var event Event
-  db.QueryRow("SELECT id,eventid,eventname FROM eventTable WHERE id = '1';").Scan(&event.id, &event.eventid, &event.eventname)
-  fmt.Println("Event to:", event)
+func Updateevent()(bool) {
+  var result string
+  db, err := sql.Open("mysql", "golanguser:golang@/golang")
   defer db.Close()
+  if err !=nil {
+    fmt.Println("Error is", err)
+  } else {
+    fmt.Println(db.QueryRow("update id,eventid,eventname FROM eventTable WHERE id = '1';").Scan(&result))
+  }
+  return true
 }

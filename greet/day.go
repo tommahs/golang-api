@@ -1,4 +1,3 @@
 package greet
 
-var morning = "Guten moring"
-var Morning = "Hello, " + morning
+var Morning = "Hello fellow Go-user."
