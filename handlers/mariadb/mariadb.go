@@ -20,6 +20,7 @@ type event struct {
 }
 
 func Selectevent()(event) {
+// TODO: Change query to var
   var Event event
   db, err := sql.Open("mysql", "golanguser:golang@/golang")
   if err != nil {
@@ -27,10 +28,13 @@ func Selectevent()(event) {
   } else {
     defer db.Close()
     db.QueryRow("SELECT id,eventid,eventname FROM eventTable WHERE id = '1';").Scan(&Event.id, &Event.eventid, &Event.eventname)
+
   }
   return Event
 }
 
+
+// WIP
 func Updateevent()(bool) {
   var result string
   db, err := sql.Open("mysql", "golanguser:golang@/golang")

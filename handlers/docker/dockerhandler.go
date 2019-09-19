@@ -43,7 +43,6 @@ func main(){
   }
   log.Print(string(output))
   fmt.Println()
-  output = string(output)
   fmt.Println(counter)
   fmt.Println(output)
 }
