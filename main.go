@@ -40,3 +40,10 @@ func main() {
   http.HandleFunc("/", routing.Router)
   log.Fatal(http.ListenAndServe(hostname, nil))
 }
+
+// Import all modules into the system (routes/handlers)
+
+func loadModules() {
+  
+
+}
