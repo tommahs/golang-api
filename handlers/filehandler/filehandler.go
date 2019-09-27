@@ -1,5 +1,4 @@
-package main
-// package filehandler
+package filehandler
 
 import (
   "fmt"
@@ -21,7 +20,6 @@ func ReadFile(filename string) (string){
 
 func WriteFile(filename string, writestring string) (error) {
   data := ReadFile(filename)
-  fmt.Print(data)
   data += writestring
   data += "\n"
   err := ioutil.WriteFile(filename, []byte(data), 0644)

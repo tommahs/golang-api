@@ -1,5 +1,4 @@
 package mariadb
-// package main
 
 import (
   "fmt"
@@ -19,15 +18,15 @@ type event struct {
   eventname string
 }
 
-func Selectevent()(event) {
+func Selectevent(url string)(event) {
 // TODO: Change query to var
   var Event event
   db, err := sql.Open("mysql", "golanguser:golang@/golang")
+  defer db.Close()
   if err != nil {
     fmt.Println("Error is", err)
   } else {
-    defer db.Close()
-    db.QueryRow("SELECT id,eventid,eventname FROM eventTable WHERE id = '1';").Scan(&Event.id, &Event.eventid, &Event.eventname)
+    db.QueryRow("SELECT id,eventid,eventname FROM eventTable WHERE id = '",url, "';").Scan(&Event.id, &Event.eventid, &Event.eventname)
 
   }
   return Event
