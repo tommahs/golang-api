@@ -27,8 +27,9 @@ Auteur: Tom van Hamersveld
 11. Internet Browser toont resultaat op het scherm
 
 ## Setup
-In de setup moeten er mappen aangemaakt worden. Dit kan gedaan worden met het "mkdir commando"
-Stel je wilt een map aanmaken in ~/GoProjects/Project1>:
+In de setup moeten er mappen aangemaakt worden en genavigeerd worden naar verschillende mappen.
+De volgende commando's kunnen hiervoor ingezet worden: "mkdir" "cd" en "pwd"
+Stel je wilt een map aanmaken in ~/GoProjects/Project1:
 > "mkdir ~/GoProjects/Project1/src"
 
 Om van map te wisselen kan het volgende commando gebruikt worden:
@@ -37,21 +38,33 @@ Om van map te wisselen kan het volgende commando gebruikt worden:
 of als je omhoog wilt,
 > "cd .."
 
-Om te kijken waar in de mappenstructuur je bent kan het volgende gebruikt worden:
+Om te kijken in waar in de mappenstructuur je bent:
 > "pwd"
 
+### Installatie golang-api
 Surf naar "https://github.com/tommahs/golang-api"
 Druk rechtsbovenin op "Clone or download"
 Download de zip variant
 Pak de zip uit en plaats de map "golang-api" in de map "~/GoProjects/Project1/src"
 
+### Installatie SQL library
 Surf naar "https://github.com/go-sql-driver/mysql"
 Druk rechtsbovenin op "Clone or download"
 Download de zip variant
 Pak de zip uit en plaats de bestanden in  map "mysql" in de map "~/GoProjects/Project1/src/github.com/go-sql-driver"
 
-Als deze stappen zijn voldaan kan het script alsvolgt uitgevoerd worden:
-Open een terminal
-type "go run ~/GoProjects/Project1/src/golang-api/main.go"
+### Configuratie Database
+In de database "mariadb" voer de volgende regels uit:
+> show databases;
+create database golang default character set utf8 default collate utf8_bin;
+GRANT ALL PRIVILEGES ON golang.* to golanguser@'%' IDENTIFIED BY 'golang';
+GRANT ALL PRIVILEGES ON golang.* to golanguser@'localhost' IDENTIFIED BY 'golang';
+USE golang;
+CREATE TABLE events(id INT NOT NULL AUTO_INCREMENT, Eventid INT NOT NULL, Eventname VARCHAR(255), PRIMARY KEY(id));
+INSERT INTO events(eventid, eventname) VALUES(1, 'Start');
 
-## Assignment
+### Testen script
+1. Als deze stappen zijn voldaan kan het script alsvolgt uitgevoerd worden:
+2. Open een terminal
+3. Type "go run ~/GoProjects/Project1/src/golang-api/main.go"
+4. Open een internet browser en surf naar "localhost:8080/api"
