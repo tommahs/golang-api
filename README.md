@@ -1,6 +1,7 @@
 # golang-api
 > API geschreven in de programmeertaal Go met gebruik van de standaard libraries aangeleverd door Go.
-> Auteur: Tom van Hamersveld
+
+Auteur: Tom van Hamersveld
 
 
 ## Introductie
@@ -31,6 +32,4 @@
 
 ## Setup
 
-## Inner working
-
-## end
+## Assignment
