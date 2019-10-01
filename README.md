@@ -2,7 +2,7 @@
 Auteur: Tom van Hamersveld
 ## Introductie
 
-Een Web API is Application programming interface bereikbaar over het netwerk. De Sue student edition heeft als thema "data"  en deze API levert zorgt ervoor dat de data opgehaald wordt en weergegeven wordt. Je zou een API kunnen zien als een doorgeef luik.
+Een Web API is Application programming interface bereikbaar over het netwerk. De Sue student edition heeft als thema "data"  en deze API zorgt ervoor dat de data opgehaald wordt en weergegeven wordt. Je zou een API kunnen zien als een doorgeef luik.
 
 In de install.md staat een uitwerking zoals wij denken dat een WebAPI zou moeten werken. Aan de lezer de uitdaging om dit na te bouwen en/of uit te breiden.
 
