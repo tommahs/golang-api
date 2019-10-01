@@ -2,7 +2,7 @@
 API geschreven in de programmeertaal Go met gebruik van de standaard libraries aangeleverd door Go.
 Auteur: Tom van Hamersveld
 
-![alt text](https://drive.google.com/file/d/1WQ7CBjFNBE9nLKGy8NW0uAR2WLp6LJGJ)
+![alt text]("https://raw.githubusercontent.com/tommahs/golang-api/Functionele werking API.png")
 ## Introduction
 
 ## Setup
