@@ -2,21 +2,21 @@
 Auteur: Tom van Hamersveld
 ## Introductie
 
-Een Web API is Application programming interface bereikbaar over het netwerk. De Sue student edition heeft als thema "data"  en deze API zorgt ervoor dat de data opgehaald wordt en weergegeven wordt. Je zou een API kunnen zien als een doorgeef luik.
+Een Web API is Application programming interface bereikbaar over het netwerk. De Sue student edition heeft als thema "data"  en deze API zorgt ervoor dat de data opgehaald en weergegeven wordt. Je zou een API kunnen zien als een doorgeef luik.
 
 In de install.md staat een uitwerking zoals wij denken dat een WebAPI zou moeten werken. Aan de lezer de uitdaging om dit na te bouwen en/of uit te breiden.
 
-<b>Mocht je problemen hebben, Probeer te lokaliseren waar het probleem zit:</b>
-> fmt.Printf("%T", <ZET HIR DE VARIABELE NEER WAAR JE DENKT DAT HET FOUT GAAT>)
+<b>Mocht je problemen hebben, probeer te lokaliseren waar het probleem zit door de volgende code toe te voegen aan het gedeelte waar je mee bezig bent :</b>
+> fmt.Printf("%T", "ZET HIER DE VARIABELE NEER WAAR JE DENKT DAT HET FOUT GAAT")
 
-> fmt.Printf("%v", <ZET HIR DE VARIABELE NEER WAAR JE DENKT DAT HET FOUT GAAT>)
+> fmt.Printf("%v", "ZET HIR DE VARIABELE NEER WAAR JE DENKT DAT HET FOUT GAAT")
 
 ### Begrippen:
 API:
 >https://computerworld.nl/development/74796-wat-is-een-api
 
 Database:
-Een simpele tabel in een database is vergelijkbaar met een excel-sheet
+Verzameling tabellen beschikbaar gemaakt in software. Een simpele tabel in een database is vergelijkbaar met een excel-sheet
 >http://www.webdesign-gids.nl/wat_is_een_database
 
 
@@ -37,7 +37,7 @@ Een simpele tabel in een database is vergelijkbaar met een excel-sheet
    tabel "events" waarbij uniek id "1" is uit
    database
 6. API vraagt aan de database
-7. Database probeert uniek 1 uit events te lezen
+7. Database probeert uniek id 1 uit events te lezen
 8. Database stuurt resultaat naar API
 9. API stuurt resultaat naar Operating System
 10. Operating System stuurt resultaat naar Internet Browser
