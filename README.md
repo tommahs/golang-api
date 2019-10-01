@@ -4,9 +4,9 @@
 
 
 ## Introductie
-###Functionele werking API:
+### Functionele werking API:
 >![alt text](https://raw.githubusercontent.com/tommahs/golang-api/master/functioneel-api.png?token=AFMV6OLIHODYLHMQCXXUIUC5TR7AS)
-###Uitleg:
+### Uitleg:
 1. User “surft” naar de URL (adres)
     Localhost:8080/api/db/events/read/1
 2. Browser stuurt door naar Operating
