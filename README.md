@@ -1,9 +1,26 @@
 # golang-api
-API geschreven in de programmeertaal Go met gebruik van de standaard libraries aangeleverd door Go.
 Auteur: Tom van Hamersveld
-
-
 ## Introductie
+
+Een Web API is Application programming interface bereikbaar over het netwerk. De Sue student edition heeft als thema "data"  en deze API levert zorgt ervoor dat de data opgehaald wordt en weergegeven wordt. Je zou een API kunnen zien als een doorgeef luik.
+
+In de install.md staat een uitwerking zoals wij denken dat een WebAPI zou moeten werken. Aan de lezer de uitdaging om dit na te bouwen en/of uit te breiden.
+
+<b>Mocht je problemen hebben, Probeer te lokaliseren waar het probleem zit:</b>
+> fmt.Printf("%T", <ZET HIR DE VARIABELE NEER WAAR JE DENKT DAT HET FOUT GAAT>)
+
+> fmt.Printf("%v", <ZET HIR DE VARIABELE NEER WAAR JE DENKT DAT HET FOUT GAAT>)
+
+### Begrippen:
+API:
+>https://computerworld.nl/development/74796-wat-is-een-api
+
+Database:
+Een simpele tabel in een database is vergelijkbaar met een excel-sheet
+>http://www.webdesign-gids.nl/wat_is_een_database
+
+
+
 ### Functionele werking API:
 ![alt text](https://raw.githubusercontent.com/tommahs/golang-api/master/functioneel-api.png?token=AFMV6OLIHODYLHMQCXXUIUC5TR7AS)
 ### Uitleg:
@@ -41,30 +58,16 @@ of als je omhoog wilt,
 Om te kijken in waar in de mappenstructuur je bent:
 > "pwd"
 
-### Installatie golang-api
-Surf naar "https://github.com/tommahs/golang-api"
-Druk rechtsbovenin op "Clone or download"
-Download de zip variant
-Pak de zip uit en plaats de map "golang-api" in de map "~/GoProjects/Project1/src"
+Om de inhoud van een bestand te zien:
+> "cat bestandsnaam"
+## Challenge
+Wil je graag Go leren programmeren? Denk je dat jij de code die wij geschreven hebben kan verbeteren?
+Wil je graag gebruik maken van deze code om iets voor jezelf te maken? Dat kan!
+Wij staan open voor ideeen!
 
-### Installatie SQL library
-Surf naar "https://github.com/go-sql-driver/mysql"
-Druk rechtsbovenin op "Clone or download"
-Download de zip variant
-Pak de zip uit en plaats de bestanden in  map "mysql" in de map "~/GoProjects/Project1/src/github.com/go-sql-driver"
+Mogelijkheden:
+>- Maak een API die lijkt op het functioneel ontwerp
 
-### Configuratie Database
-In de database "mariadb" voer de volgende regels uit:
-> show databases;
-create database golang default character set utf8 default collate utf8_bin;
-GRANT ALL PRIVILEGES ON golang.* to golanguser@'%' IDENTIFIED BY 'golang';
-GRANT ALL PRIVILEGES ON golang.* to golanguser@'localhost' IDENTIFIED BY 'golang';
-USE golang;
-CREATE TABLE events(id INT NOT NULL AUTO_INCREMENT, Eventid INT NOT NULL, Eventname VARCHAR(255), PRIMARY KEY(id));
-INSERT INTO events(eventid, eventname) VALUES(1, 'Start');
+>- Maak modules en voeg deze toe aan de al geschreven code api -> install.md bevat installatie handleiding
 
-### Testen script
-1. Als deze stappen zijn voldaan kan het script alsvolgt uitgevoerd worden:
-2. Open een terminal
-3. Type "go run ~/GoProjects/Project1/src/golang-api/main.go"
-4. Open een internet browser en surf naar "localhost:8080/api"
+>- (hobby / huiswerk) Zoek op youtube naar "Sentdex", deze man heeft playlists voor programmeren in zowel python als go.
