@@ -2,7 +2,6 @@ package main
 
 import (
   "fmt"
-  // "io/ioutil"
   "log"
   "net/http"
   "golang-api/greet"
@@ -15,6 +14,6 @@ var hostname = "localhost:8080"
 
 func main() {
   fmt.Println(greet.Morning)
-  http.HandleFunc("/", routing.Router)
+  go http.HandleFunc("/", routing.Router)
   log.Fatal(http.ListenAndServe(hostname, nil))
 }

@@ -1,6 +1,6 @@
 package types
 
 type Event struct {
-  id, Eventid string
+  Id, Eventid string
   Eventname string
 }
