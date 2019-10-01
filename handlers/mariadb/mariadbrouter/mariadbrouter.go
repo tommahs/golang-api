@@ -4,7 +4,6 @@ import (
   "net/http"
   "strings"
   "golang-api/handlers/mariadb/mariadbfunctions"
-  // "fmt"
   mariadbtypes "golang-api/handlers/mariadb/types"
 )
 
@@ -17,7 +16,7 @@ func Main(w http.ResponseWriter, url string) (result string, err error) {
   var event mariadbtypes.Event
   splittedurl := strings.Split(url, "/")
   if len(splittedurl) < 3 {
-    return result, err
+    return "Invalid call\n", err
   }
   table = splittedurl[0]
   method = splittedurl[1]
@@ -26,7 +25,7 @@ func Main(w http.ResponseWriter, url string) (result string, err error) {
     switch method {
     case "read":
       if data ==  "" {
-        result = "Error in value"
+        result = "Error in value\n"
         return result, err
       } else {
         event, err = mariadbfunctions.Readevent(table, data)

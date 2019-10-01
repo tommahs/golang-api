@@ -14,6 +14,6 @@ var hostname = "localhost:8080"
 
 func main() {
   fmt.Println(greet.Morning)
-  go http.HandleFunc("/", routing.Router)
+  http.HandleFunc("/", routing.Router)
   log.Fatal(http.ListenAndServe(hostname, nil))
 }
