@@ -28,9 +28,8 @@ func WriteFile(filename string, writestring string) (error) {
   }
 
 
-
-func main(){
-  err := WriteFile("../test.txt", "Hallo")
+func Main(filename string, err error) {
+  WriteFile(filename, fmt.Sprintf("%s", err)) // // TODO: testing filehandlers
   check(err)
   fmt.Println("done!")
 }
