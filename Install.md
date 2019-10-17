@@ -2,18 +2,17 @@
 Surf naar "https://github.com/tommahs/golang-api"
 Druk rechtsbovenin op "Clone or download"
 Download de zip variant
-Pak de zip uit en plaats de map "golang-api" in de map "~/GoProjects/Project1/src"
+Pak de zip uit en plaats de map "golang-api" in de golang map.
 
 ### Installatie SQL library
 Surf naar "https://github.com/go-sql-driver/mysql"
 Druk rechtsbovenin op "Clone or download"
 Download de zip variant
-Pak de zip uit en plaats de bestanden in  map "mysql" in de map "~/GoProjects/Project1/src/github.com/go-sql-driver"
+Pak de zip uit en plaats de bestanden in  map "mysql" in de src map in de golang map.
 
-### Installatie + Configuratie Database
-Vraag aan de begeleiders hoe dit moet.
+### Configuratie Database
 
-In de database "mariadb" voer de volgende regels uit:
+Voer de volgende regels uit in mariadb:
 > show databases;
 create database golang default character set utf8 default collate utf8_bin;
 GRANT ALL PRIVILEGES ON golang.* to golanguser@'%' IDENTIFIED BY 'golang';

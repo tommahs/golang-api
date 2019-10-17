@@ -1,8 +1,8 @@
-# golang-api
-Auteur: Tom van Hamersveld
+# Golang-api
 ## Introductie
-
-Een Web API is Application programming interface bereikbaar over het netwerk. De Sue student edition heeft als thema "data"  en deze API zorgt ervoor dat de data opgehaald en weergegeven wordt. Je zou een API kunnen zien als een doorgeef luik.
+Voor de Sue Golang meetup 2 is er gekozen om een API te maken.
+De map tutorials bevat kleine stukjes voorbeeld code zoals in de presentatie weergegeven
+De map example bevat een werkend voorbeeld van een zelfgeschreven API met minimale externe packages. Dit example gaat ervanuit dat je een database(mariadb) lokaal draait
 
 In de install.md staat een uitwerking zoals wij denken dat een WebAPI zou moeten werken. Aan de lezer de uitdaging om dit na te bouwen en/of uit te breiden.
 
@@ -21,9 +21,9 @@ Verzameling tabellen beschikbaar gemaakt in software. Een simpele tabel in een d
 
 
 
-### Functionele werking API:
-![alt text](https://raw.githubusercontent.com/tommahs/golang-api/master/functioneel-api.png?token=AFMV6OLIHODYLHMQCXXUIUC5TR7AS)
-### Uitleg:
+### Functionele werking example API:
+![alt text](https://raw.githubusercontent.com/tommahs/golang-api/master/functioneel-api.png?token=AFMV6OMLJKNBOJSAHMFYCMS5WGKDA)
+### Uitleg example API:
 1. User “surft” naar de URL (adres)
     Localhost:8080/api/db/events/read/1
 2. Browser stuurt door naar Operating
@@ -61,13 +61,6 @@ Om te kijken in waar in de mappenstructuur je bent:
 Om de inhoud van een bestand te zien:
 > "cat bestandsnaam"
 ## Challenge
-Wil je graag Go leren programmeren? Denk je dat jij de code die wij geschreven hebben kan verbeteren?
-Wil je graag gebruik maken van deze code om iets voor jezelf te maken? Dat kan!
-Wij staan open voor ideeen!
-
 Mogelijkheden:
 >- Maak een API die lijkt op het functioneel ontwerp
-
 >- Maak modules en voeg deze toe aan de al geschreven code api -> install.md bevat installatie handleiding
-
->- (hobby / huiswerk) Zoek op youtube naar "Sentdex", deze man heeft playlists voor programmeren in zowel python als go.
