@@ -6,7 +6,7 @@ De map tutorials bevat kleine stukjes voorbeeld code zoals in de presentatie wee
 De map example bevat een werkend voorbeeld van een zelfgeschreven API met minimale externe packages. Dit example gaat ervanuit dat je een database(mariadb) lokaal draait. In de install.md staat een uitwerking zoals wij denken dat een WebAPI zou moeten werken.
 
 ### Functionele werking example API:
-![alt text](https://raw.githubusercontent.com/tommahs/golang-api/master/functioneel-api.png?token=AFMV6OMLJKNBOJSAHMFYCMS5WGKDA)
+![alt text](https://raw.githubusercontent.com/tommahs/golang-api/master/example-api/functioneel-api.png)
 ### Uitleg example API:
 1. User “surft” naar de URL (adres)
     Localhost:8080/api/db/events/read/1
