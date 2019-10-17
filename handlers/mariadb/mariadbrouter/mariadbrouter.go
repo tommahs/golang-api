@@ -31,9 +31,7 @@ func Main(w http.ResponseWriter, url string) (result string, err error) {
 					result = "error in reading data\n"
 					return result, err
 				} else {
-					// fmt.Printf("event: %v", result)
 					result = "Selected data from event: \nID = " + string(event.Eventid) + "\nName = " + string(event.Eventname)
-					// fmt.Printf(result)
 					return result, err
 				}
 			}

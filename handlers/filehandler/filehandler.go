@@ -29,7 +29,7 @@ func WriteFile(filename string, writestring string) (error) {
 
 
 func Main(filename string, err error) {
-  WriteFile(filename, fmt.Sprintf("%s", err)) // // TODO: testing filehandlers
+  WriteFile(filename, fmt.Sprintf("%s", err))
   check(err)
   fmt.Println("done!")
 }

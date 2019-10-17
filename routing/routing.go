@@ -18,7 +18,6 @@ func Router(w http.ResponseWriter, r *http.Request) {
 			filehandler.Main("errorlog", err)
 		}
 		fmt.Fprint(w, result)
-		// database(r.URL.Path[:])
 	} else {
 		fmt.Fprint(w, "Succesfull connection with the API!\n")
 		fmt.Println(r.RemoteAddr, "accessed ", r.URL.Path[4:])
