@@ -1,0 +1,7 @@
+// show databases;
+// create database golang default character set utf8 default collate utf8_bin;
+// GRANT ALL PRIVILEGES ON golang.* to golanguser@'%' IDENTIFIED BY 'golang';
+// GRANT ALL PRIVILEGES ON golang.* to golanguser@'localhost' IDENTIFIED BY 'golang';
+// USE golang;
+// CREATE TABLE events(id INT NOT NULL AUTO_INCREMENT, Eventid INT NOT NULL, Eventname VARCHAR(255), PRIMARY KEY(id));
+// INSERT INTO events(eventid, eventname) VALUES(1, 'Start');
